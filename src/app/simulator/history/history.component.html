@@ -1,0 +1,11 @@
+<div class="history-container">
+    <div class="row">
+        <div class="col-md-10">
+            <img [src]="data.image"/>
+        </div>
+        <div class="col-md-2">
+            <p-button [icon]="data.hidden ? 'fas fa-eye-slash' : 'fas fa-eye'" (onClick)="toggleHidden()"></p-button>
+            <p-button icon="fas fa-times" (onClick)="delete()"></p-button>
+        </div>
+    </div>
+</div>

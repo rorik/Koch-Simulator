@@ -1,0 +1,14 @@
+div.history-container {
+    width: 100%;
+    cursor: pointer;
+    & div.row {
+        margin: unset;
+        & > div {
+            display: inline-block;
+            padding: 0;
+        }
+    }
+    & img {
+        width: 100%;
+    }
+}

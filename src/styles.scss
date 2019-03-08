@@ -1,0 +1,33 @@
+html.html-root {
+    height: 100%;
+    &>body {
+        height: 100%;
+    }
+}
+
+p-panelmenu > div.ui-panelmenu {
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    &>div.ui-panelmenu-panel > div {
+        &.ui-state-active > a {
+            border: 1px solid #c8c8c8;
+            background-color: #f4f4f4;
+            color: #333333;
+            &>span.ui-panelmenu-icon {
+                color: #848484;
+            }
+        }
+        & a.ui-state-active {
+            border: 1px solid #007ad9 !important;
+            background-color: #007ad9 !important;
+            color: #ffffff !important;
+            &:hover {
+                background-color: #116fbf !important;
+                & > span {
+                    color: #ffffff !important;
+                }
+            }
+        }
+    }
+}

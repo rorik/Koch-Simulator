@@ -1,0 +1,20 @@
+div.vertical-column {
+    height: 100%;
+    max-height: 100vh;
+    display: inline-block;
+}
+
+div.scrollable {
+    overflow: auto;
+}
+
+div.centered {
+    margin: auto;
+}
+
+div.buttons {
+    margin: 1rem 0;
+    & p-button {
+        margin-right: 0.4rem;
+    }
+}

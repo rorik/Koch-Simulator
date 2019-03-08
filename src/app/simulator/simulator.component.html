@@ -1,0 +1,33 @@
+<div class="row h-100">
+  <div class="col-md-10 vertical-column">
+    <div id="canvas-row" class="h-75 w-100 d-flex">
+      <div id="canvas-container" class="centered"></div>
+    </div>
+    <div class="h-25">
+      <div>
+        <span>Iteration: {{ iteration }}</span>
+      </div>
+      <div class="buttons">
+          <p-button label="Next" (onClick)="step()"></p-button>
+          <p-button label="Restart" (onClick)="restart()"></p-button>
+          <p-button label="Stop" (onClick)="stop()"></p-button>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <p-checkbox name="group1" value="clear" label="Clear before drawing" [(ngModel)]="options.clear" binary="true" inputId="cl"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+          <p-checkbox name="group1" value="draw" label="Progressive drawing" [(ngModel)]="options.draw" binary="true" inputId="dr"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+          <p-checkbox name="group1" value="color" label="Random color" [(ngModel)]="options.color" binary="true" inputId="co"></p-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 vertical-column scrollable">
+    <ng-container *ngFor="let step of history">
+      <app-history [data]="step" (onSelected)="loadStep($event)"></app-history>
+    </ng-container>
+  </div>
+</div>
